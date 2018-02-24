@@ -58,6 +58,8 @@ Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "vsts-tfvc-updateshelveset",
 EndProject
 Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "vsts-tfvc-checkout", "vsts-tfvc-checkout\vsts-tfvc-checkout.pssproj", "{EFDE6A51-7545-4E59-9448-32E2ACA21F1A}"
 EndProject
+Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "vsts-tfvc-generic", "vsts-tfvc-generic\vsts-tfvc-generic.pssproj", "{C5EF6F1C-4F1D-4934-BC8F-78B79D6C1B52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,10 @@ Global
 		{EFDE6A51-7545-4E59-9448-32E2ACA21F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFDE6A51-7545-4E59-9448-32E2ACA21F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFDE6A51-7545-4E59-9448-32E2ACA21F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5EF6F1C-4F1D-4934-BC8F-78B79D6C1B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5EF6F1C-4F1D-4934-BC8F-78B79D6C1B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5EF6F1C-4F1D-4934-BC8F-78B79D6C1B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5EF6F1C-4F1D-4934-BC8F-78B79D6C1B52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,5 +106,8 @@ Global
 		{ADFB1042-D16B-4621-900A-CFB227C18EA0} = {C899F09A-AFF7-46A0-A679-BC2FE80B1D12}
 		{1FC9630F-42C8-416D-8D55-EE63BF92B0AA} = {ADFB1042-D16B-4621-900A-CFB227C18EA0}
 		{E242DC7E-1E06-46CF-9444-BC636897F622} = {C899F09A-AFF7-46A0-A679-BC2FE80B1D12}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFE7049A-DBD6-417F-B3CE-1F2492CB4B88}
 	EndGlobalSection
 EndGlobal

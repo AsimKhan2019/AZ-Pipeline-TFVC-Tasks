@@ -1,0 +1,30 @@
+{
+  "id": "514ea779-a8b2-47d3-b19b-672361726dee",
+  "name": "TFVC",
+  "friendlyName": "TFVC #{Extension.Tag}#",
+  "description": "Interact with TFVC repository.",
+  "helpMarkDown": "Version: #{Build.BuildNumber}#. [More Information](https://github.com/jessehouwing/vsts-tfvc-tasks/wiki/Delete)",
+  "category": "Utility",
+  "author": "Jesse Houwing",
+  "version": {
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0
+  },
+  "minimumAgentVersion": "1.83.0",
+  "groups": [
+    {
+      "name": "configurationOptions",
+      "displayName": "Configuration",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+  ],
+  "instanceNameFormat": "TFVC command",
+  "execution": {
+    "PowerShell3": {
+      "target": "$(currentDirectory)\\Tfvc.ps1"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{c5ef6f1c-4f1d-4934-bc8f-78b79d6c1b52}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyApplication</RootNamespace>
+    <AssemblyName>MyApplication</AssemblyName>
+    <Name>vsts-tfvc-generic</Name>
+    <ManifestPath>$(OutDir)\$(ProjectName).psd1</ManifestPath>
+    <NestedModules>ps_modules\VstsTaskSdk\VstsTaskSdk.psd1</NestedModules>
+    <Guid>4fc3e160-9008-4012-9dea-63e98be8d3d9</Guid>
+    <ProcessorArchitecture />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="icon.png" />
+    <Content Include="tools\vswhere.exe" />
+    <Content Include="ps_modules\VstsTaskSdk\lib.json" />
+    <Content Include="ps_modules\VstsTaskSdk\Minimatch.dll" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\fr-fr\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\it-IT\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\ja-jp\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\ko-KR\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\ru-RU\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-CN\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-TW\resources.resjson" />
+    <Content Include="ps_modules\VstsTaskSdk\VstsTaskSdk.dll" />
+    <Content Include="task.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ps_modules\VstsTaskSdk\FindFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\InputFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\LegacyFindFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\LocalizationFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\LoggingCommandFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\LongPathFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\OutFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\ServerOMFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\ToolFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\TraceFunctions.ps1" />
+    <Compile Include="ps_modules\VstsTaskSdk\VstsTaskSdk.psd1" />
+    <Compile Include="ps_modules\VstsTaskSdk\VstsTaskSdk.psm1" />
+    <Compile Include="Tfvc.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ps_modules\" />
+    <Folder Include="tools" />
+    <Folder Include="ps_modules\VstsTaskSdk\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\fr-fr\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\it-IT\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\ja-jp\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\ko-KR\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\ru-RU\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-CN\" />
+    <Folder Include="ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-TW\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="Build" />
+  <Import Project="$(MSBuildExtensionsPath)\PowerShell Tools for Visual Studio\PowerShellTools.targets" Condition="Exists('$(MSBuildExtensionsPath)\PowerShell Tools for Visual Studio\PowerShellTools.targets')" />
+</Project>
