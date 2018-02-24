@@ -80,6 +80,10 @@
   },
   "files": [
     {
+      "path": "vsts-tfvc-generic/"
+    },
+
+    {
       "path": "vsts-tfvc-add/TfvcAdd.ps1"
     },
     {
@@ -169,6 +173,16 @@
 
   ],
   "contributions": [
+    {
+      "id": "vsts-tfvc-generic",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "vsts-tfvc-generic"
+      }
+    },
     {
       "id": "vsts-tfvc-add",
       "type": "ms.vss-distributed-task.task",

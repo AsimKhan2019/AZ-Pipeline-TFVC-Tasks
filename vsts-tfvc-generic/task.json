@@ -20,6 +20,26 @@
     }
   ],
   "inputs": [
+    {
+      "defaultValue": "$(System.DefaultWorkingDirectory)",
+      "groupName": "",
+      "helpMarkdown": "",
+      "label": "Working Directory",
+      "name": "WorkingDirectory",
+      "required": false,
+      "type": "string",
+      "visibleRule": ""
+    },
+    {
+      "defaultValue": "",
+      "groupName": "",
+      "helpMarkdown": "",
+      "label": "Additional Arguments",
+      "name": "Arguments",
+      "required": false,
+      "type": "string",
+      "visibleRule": ""
+    }
   ],
   "instanceNameFormat": "TFVC command",
   "execution": {
